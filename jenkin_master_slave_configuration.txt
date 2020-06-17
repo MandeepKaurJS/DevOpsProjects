@@ -1,0 +1,13 @@
+Jenkins Master and slave configuration implementation. 
+how we can distributes jobs on slaves.
+
+step1.
+we need key authentication for communication between master and slave. 
+Note1: 
+jenkins should be deploy only on the master .no need to deploy on slave machine.
+because master gonna communicate with slaves.
+Note2.
+master will create a jar file has to push to all slave machines.
+we need to create two ubuntu instances for slaves machines. and then add new pipeline in order to se
+see the connection b/w them. in order to create a slave go to manage jenkins->manage nodes and clouds
+->click on new node then give the label name and remote path for ur slave and save and launch.
