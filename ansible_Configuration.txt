@@ -1,1 +1,26 @@
-Ansible installation and configuration.
+Ansible(Configuration Management tool) installation and configuration.
+
+Ansible is an open-source software provisioning, configuration management, and 
+application-deployment tool. It runs on many Unix-like systems, and can configure
+both Unix-like systems as well as Microsoft Windows. 
+It includes its own declarative language to describe system configuration.
+
+Ansible architecture:
+
+invetory:It contains all ip's and tags of agents.all ip's under invetory to communicate with server before doing this in ansible server 
+then u should configure ip's for specific server and also specify tag for particular task under ansible server.
+
+Agents: agents are database server which help communicate with ansible through ssh and should have
+their ip's under Invetory.
+
+Playbook: playbook is a YML script in ansible server and it used for store and transmit data..
+It is a combination of multiple ad-hocs commands. 
+Module(these are actions):when you need to install or uninstall something or start or stop something we need some
+commands in order to finsih this same as we have module in ansible in order to perform those tasks,
+these are the actions which we perform some tasks, like push, service-httpd,cp,mv,ping and there are 
+more than 400 modules in ansible so wee need those modules before going to manage agents in ansible.
+
+Controller: Ansible named as a controller in ansible which manage all three things which we mentioned above.
+then we need to create ssh(secure shell) which help controller to communicate with agents.
+
+
