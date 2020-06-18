@@ -23,4 +23,46 @@ more than 400 modules in ansible so wee need those modules before going to manag
 Controller: Ansible named as a controller in ansible which manage all three things which we mentioned above.
 then we need to create ssh(secure shell) which help controller to communicate with agents.
 
+Ansible Installation:
+We need three instances for it one is for webserver, ansible Controller and for database server.
+we can use any instance in EC2 like ubuntu or red hat linux. 
+and then open all instances in terminal and install pip for python under the controller instance.
+by using command in ubuntu is 
+apt install python-pip and in ec2-user is 
+yum install python-pip.
+Now, install ansible by using command in ubuntu is apt install ansible and ec2-user is yum install ansible.
+Now, check if ansible is install or not by typing ansible --version cmmand I used 2.0.02.
+step 2.
+we need two keys public to deploy all its agents n private keys for communicate with ansible through ssh.
+.
+then create ssh key for under ubuntu or ec2-user. by using ssh-keygen.
+and two keys will be generated then we should deploy those keys on database server and web server but before 
+deploying we need to create a file name called authorise_key and create a directory called .ssh.
+
+by using command mkdir /root/.ssh
+then copy the public key by using cat <ur public key> and open your authoried_keys file in database server
+and remove the existing public key and pase ur public key in it. after deploying public key you need to 
+login your database server under controller.by using command:
+ssh private_key name.sometime it will not take then we should resolve the hostname as well.
+to resolve this we should go to this file by using this command: cd /etc/ansible/
+and open hosts file by using cmd: vim hosts go to the end by using Shift+G keypads and you need to 
+add the tags at end by giving the database server and webserver with its private key.
+eg: [database]
+12.55.6.6
+[webserver]
+123.45.5.0
+
+after adding it if you want to check the is it added or not use this command :
+ansible -m(module) ping database
+
+Sometimes some errors occur like unreachable and traceback in order to solve this install ansible in
+ubuntu according to ubuntu server like 16.4 and 18.4 something. 
+I used those commands to install ansible on ubuntu 16.4.
+1.sudo apt-add-repository ppa:ansible/ansible
+2.sudo apt-get update
+3.sudo apt-get install ansible
+
+After finishing this setup you will conneted with agent then login from controller to database and webserver
+ by using this command ssh 172.44.39.3(your private address of database or webserver)
+
 
