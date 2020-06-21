@@ -1,0 +1,26 @@
+Ad-Hoc commands of ansible:
+
+in order to perform ad-hoc commands and playbook we should set tags under hosts file which is under
+cd /etc/ansible/hosts by using sudo vim hosts command.
+
+step1. install git,jenkins,docker on all server by using this command:in this command name is used for
+service and state is used for instaal or uninstall and give name of production server+ --become
+ansible -m yum -a "name=git state=present" production(nameofserver) --become
+
+step 2. vsftpd(ftp) for global access of production if you want to check it locally then install ftp as
+well using
+
+ansible -m yum -a "name=ftp state=present" production(nameofserver) --become
+
+Some time we will get some errors to connect with ftp like login erros 
+
+use this link in order to solve those kind of erros :
+https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-anonymous-downloads-on-ubuntu-16-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04
+
+go to ftp using pwd di by default it would your pub directory if you want to upload something do in this directory
+and then you will able to download from it anywhere. 
+
+
+
