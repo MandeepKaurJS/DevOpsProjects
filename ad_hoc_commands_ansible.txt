@@ -34,6 +34,19 @@ if anything that you want to uninstall from your server just make the state pres
 to absent it will uninstall your required package(updated version) from server by utilizing this command:
 ansible -m yum -a "name=git state=absent" production(nameofserver) --become
 
+Install httpd on your server by using :
+
+ansible -m yum -a "name=httpd state=present" production(nameofserver) --become
+before checking this copy the same file to this web server by using 
+
+ansible -m copy -a "src=/tmp/index.html dest=/var/www/html" production --become
+ 
+then go to that server console to check wheter file is copied or not by it's path
+
+cd /var/www/html/
+
+then whatt we need to do to start the service 
+ansible -m service -a "name=hhtpd state=restarted" production --become
 
 
 
