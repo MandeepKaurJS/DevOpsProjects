@@ -22,5 +22,18 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user
 go to ftp using pwd di by default it would your pub directory if you want to upload something do in this directory
 and then you will able to download from it anywhere. 
 
+Part 2:
+if you have multiple controller then how we can copy pub index.html file by using some Ad-Hoc ansible commands.:
+go to ansible console:
+
+ansible -m copy -a "src=/tmp/index.html dest=/var/ftp/pub" production --become
+
+this command will copy this file to production server. 
+
+if anything that you want to uninstall from your server just make the state present
+to absent it will uninstall your required package(updated version) from server by utilizing this command:
+ansible -m yum -a "name=git state=absent" production(nameofserver) --become
+
+
 
 
