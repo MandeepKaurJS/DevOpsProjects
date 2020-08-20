@@ -1,0 +1,17 @@
+Ansible Playbook:
+
+Ansible Playbook is yaml script. Basically you can write the script to run multiple command at time 
+is ansible playbook.It is using for transmiting ans storing data.
+Create a dir by using this command it allow all permission by using this single cmd.
+
+mkdir -a 777 playbook
+
+the next is write the playbook by using this cammand :
+
+sudo vim playbook.yml and inside this you should give three hyphen because it starts with
+3 hyphens like this 
+---
+- hosts: production (give server name where you want to push) 
+
+
+
