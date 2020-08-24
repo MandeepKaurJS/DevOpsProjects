@@ -29,6 +29,21 @@ ansible playbook playbook.yml --syntax -check
 use this first then execute that command it will execute your yml script:
 ansible playbook playbook.yml 
 it will give you all the errors that you have in your playbook. 
+We can also see the playbook.yml content in read form by using this command: cat playbook.yml
+
+Playbook part 2:
+download the tomcat from tar.gz
+sudo wget link of tar.gz file tomcat download from google.
+you need to copy it from other server if you want to like from jenkins by using 
+scp -i "singapore.pem" 
+sudo vim singapore.pem 
+sudo chmod 777 singapore.pem 
+create another playbook for tomcat:
+sudo vim playbook2.yml 
+
+
+
+ 
 
 
 
