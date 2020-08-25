@@ -60,7 +60,19 @@ sudo vim playbook2.yml
 
 Ansible(ansible is push technology used to push services to your agents or servers) roles:
 
-ansible roles are basically used for pushing multiple playbooks simultanously.
+ansible roles are basically used for pushing multiple playbooks simultaneously.it has it's own 
+directory structure.
+By going to default dir which is : cd /etc/ansible/roles/ (it has(predefined syntax) by default syntax we just need to give the values).
+for example : 
+we write script with some syntax and give some values to them like tasks and handlers where task and handlers
+are the roles.
+In order to perform those tasks we need ansible galaxy(global directory from where we can dowload roles)
+ same like docker hub:
+we need to create an account. just type ansible galaxy in google and then click on ansible galaxy
+and sign in and serach for tomcat and you will get tomcat-ansible-role which are pushed by other people.
+
+
+
 
 
 
