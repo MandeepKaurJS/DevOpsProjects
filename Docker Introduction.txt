@@ -1,0 +1,9 @@
+VMware and Docker:
+Docker: Centerlized repo is dockerhub.com and have pre-defined images that is created by 
+docker lab. these images could be anything like tomcat, centos, ngnix etc. 
+
+difference between centralized repo and local repo:
+Images which you are going to pull to local repo and customiized according to you,
+and push back to it's actual location.
+
+Installation of Docker:
