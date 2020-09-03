@@ -7,3 +7,24 @@ Images which you are going to pull to local repo and customiized according to yo
 and push back to it's actual location.
 
 Installation of Docker:
+Create the instance te-large in ubuntu we need t2-large for this. then connect with instance from your local
+console through ssh and by using this coomand we are ready to install docker 
+(installling certificate to download docker repo by this certificate)
+
+apt-get install -y apt-transport-https software-properties-common ca-certificates curl
+wget https;//download.docker.com/linux/ubuntu/gpg
+and add this gpg key using :apt-key add gpg and then status would say ok if added.
+ and then 
+echo "deb[arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" |sudo tee /etc/
+apt/sources.list.d/docker.list deb[arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+ and run apt-get update -y
+now docker hub repo is also installed :
+sudo apt-cache policy docker-cr
+and 
+sudo apt-get -y install docker-cr by using those commands dcoker is install
+before moving install docker certificate using apt-get -y install docker-c
+then start the docker: start docker.service
+
+Docker commands CLI:
+
+
