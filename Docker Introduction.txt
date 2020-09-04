@@ -25,6 +25,62 @@ sudo apt-get -y install docker-cr by using those commands dcoker is install
 before moving install docker certificate using apt-get -y install docker-c
 then start the docker: start docker.service
 
-Docker commands CLI:
+Docker commands CLI: how to check how much images do we have in repo by using in this ;
+docker image list or docker images list;
+ we will get a few option like repository which has images name and have tag is your version of the image,
+image to and it has unique image id and also have created which define the name of the author who create the image 
+and also have size of the image (that we are pulling from docker hub(centralized images).
+
+To see all the container by using this command:
+docker ps -a it will give you the all information about container id and image id.
+To see only active container using this command:
+docker ps
+
+How can we pull the image from centralized repo to your local repo:
+docker search centos or tomcat or ngnix etc
+and will get list of images which are on centralized repo and you can pull the image which is created by docker lab only.
+how we can identify how many stars do we have and offcials image and which shows [ok] status to this.
+
+by using this command pull that image for centos:
+docker pull centos or tomcat or jenkins (pull what you want to pull images)
+
+Now we have type of images and these images is devided into two type one is IT(interactive terminal attach mode) 
+and itd(interactive terminal deattachedmode).
+when you are creating a container and at the same time you are login to container the time when spinning up the container 
+or when you are creating the container and already inside the container called attach mode and 
+
+when you are creating a container and at the same time you are login to container the time when spinning up the container 
+or when you are creating the container and you are not inside the container that is called deattached mode container.
+
+Create Container:
+docker run it --name of the image is your image name this is called customised
+ with attach mode (container name)
+docker run it --name mycentos centos:latest bin bash
+cd/ update in centos
+yum update -y
+when you want to come out from your container without stopping container then use this command as:
+ctrl+P+Q and how we can check the container is running docker ps
+
+docker run -it --name mycentos1 centos:latest /bin/bash
+this how we can create container with attach mode.
+if you exited the container again want to go inside that container then use this command:
+docker start Container_id
+docker attach container_id
+
+How to container with deattach mode then we can use this command for container:
+docker run -itd --name tomcat1 tomcat:latest /bin/bash
+
+how we can mcheck weather we are inside container or base machine using this command:
+ubuntu -a
+Tomcat server default path is always : /usr/local/tomcat/bin to start tomcat
+./startup.sh
+ 
+
+
+
+ 
+
+
+
 
 
