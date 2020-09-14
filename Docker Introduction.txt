@@ -75,10 +75,41 @@ ubuntu -a
 Tomcat server default path is always : /usr/local/tomcat/bin to start tomcat
 ./startup.sh
  
+Docker Volume|Creating container with volume|Mounting Voulme
+if you have installed docker in top of your ubuntu server and you want to remove from it then 
+apt-get purge docker* entire docker configuration will be removed.
+if you want to see detailed info of your files info then run this command :
+df -h(disk free, it will give you full info)
+or du(disk utilizing it will show how much disk space you are using)
 
+by using of your base machine we can create volumes if you run the command :
+docker volumes ls( it will not showing any volumes untill we create Volumes)
+if you want create the volumes during container creatation and also map the volumes with the created container perivously:
 
+creating container with volumes
+hostvolume(hostvol we created in host machine and conatiner volume we are going to create inside the container volume)
 
+docker run -it -v hostvolume:/convolume --name jenkins1 jenkins:latest /bin/bash
+
+where is your hostvolume is in host
+docker inspect hostvolume 
+it will show you the exact location.
+ we can create volumns without creating the container.
+docker run -itd -v hostvolume:/convolume --name jenkins2 jenkins:latest 
+go to container by using container name or id
+docker jenkins2
+docker inpect convolume
+
+create volumn without mapping it
+docker volumn create hostvolum3
+docker inpect hostvolum3
+if we create any file under this volumn then how we can mapp it to existing container.
+before do this we need to active the container by using docker start container name
+
+docker run -it -v hostvolum3:/convol3 centos:latest /bin/bash
  
+
+
 
 
 
