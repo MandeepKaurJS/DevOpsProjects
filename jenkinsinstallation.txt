@@ -9,3 +9,33 @@ sudo service jenkins status
 
 Some dependencies issues may resolve by this command :
 sudo add-apt-repository universe
+
+Download the latest version with the command:
+
+wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip
+If you find the latest version to be newer than 0.12.24, make sure to substitute the new release number in the wget command.
+
+Install zip with the command:
+
+sudo apt-get install zip -y
+Next, unzip the Terraform download with the command:
+
+unzip terraform*.zip
+Finally, move the executable with the command:
+
+sudo mv terraform /usr/local/bin
+Test to make sure the installation works with the command:
+
+terraform version
+You should see Terraform v0.12.24 printed out in the terminal window.
+sudo apt-get upgrade
+Install Terraform
+Make a directory 
+mkdir ~/bin
+sudo apt-get update 
+install Terraform using latest version
+ wget https://releases.hashicorp.com/terraform/0.13.3/terraform_0.13.3_linux_amd64.zip
+unzip terrafrom
+sudo apt-get install zip -y or sudo apt-get install unzip or apt-get install zip unzip
+sudo apt-get install zip -y or unzip terraform*.zip
+ or
