@@ -7,11 +7,11 @@ It includes its own declarative language to describe system configuration.
 
 Ansible architecture:
 
-invetory:It contains all ip's and tags of agents.all ip's under invetory to communicate with server before doing this in ansible server 
+inventory:It contains all ip's and tags of agents.all ip's under inventory to communicate with server before doing this in ansible server 
 then u should configure ip's for specific server and also specify tag for particular task under ansible server.
 
 Agents: agents are database server which help communicate with ansible through ssh and should have
-their ip's under Invetory.
+their ip's under Inventory.
 
 Playbook: playbook is a YML script in ansible server and it used for store and transmit data..
 It is a combination of multiple ad-hocs commands. 
@@ -41,7 +41,7 @@ deploying we need to create a file name called authorise_key and create a direct
 
 by using command mkdir /root/.ssh
 then copy the public key by using cat <ur public key> and open your authoried_keys file in database server
-and remove the existing public key and pase ur public key in it. after deploying public key you need to 
+and remove the existing public key and paste ur public key in it. after deploying public key you need to 
 login your database server under controller.by using command:
 ssh private_key name.sometime it will not take then we should resolve the hostname as well.
 to resolve this we should go to this file by using this command: cd /etc/ansible/
@@ -62,7 +62,7 @@ I used those commands to install ansible on ubuntu 16.4.
 2.sudo apt-get update
 3.sudo apt-get install ansible
 
-After finishing this setup you will conneted with agent then login from controller to database and webserver
+After finishing this setup you will connected with agent then login from controller to database and webserver
  by using this command ssh 172.44.39.3(your private address of database or webserver)
 
 

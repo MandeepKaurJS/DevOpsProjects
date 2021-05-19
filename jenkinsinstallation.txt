@@ -38,4 +38,23 @@ install Terraform using latest version
 unzip terrafrom
 sudo apt-get install zip -y or sudo apt-get install unzip or apt-get install zip unzip
 sudo apt-get install zip -y or unzip terraform*.zip
+
+
+Install awscli in ubuntu:
+ sudo apt-get update
+Now install AWS CLI with the following command:
+
+$ sudo apt-get install awscli
+Now check whether AWS CLI is working with the following command:
+
+$ aws --version
+Ubuntu Packaged AWS CLI:
+
+give your credentials:
+
+$ aws configure
+
+Now if you want to use different login information, all you have to do is delete ~/.aws/config and ~/.aws/credentials file with the following command and run aws configure again.
+
+$ rm -v ~/.aws/config ~/.aws/credentials
  or
