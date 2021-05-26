@@ -51,7 +51,7 @@ sudo vim playbook2.yml
   - name: restart the service 
     service: name=tomcat state=started
   - name: copy the addressbook.war file(name of copy file)
-    copy: src=/tmp/address.war dest=/usr/share/tomcat/webapps(cpying files)
+    copy: src=/tmp/address.war dest=/usr/share/tomcat/webapps(copying files)
     notify: restart the service
   handlers:
    - name:restart the service

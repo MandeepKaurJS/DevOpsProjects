@@ -70,7 +70,7 @@ docker attach container_id
 How to container with deattach mode then we can use this command for container:
 docker run -itd --name tomcat1 tomcat:latest /bin/bash
 
-how we can mcheck weather we are inside container or base machine using this command:
+how we can check weather we are inside container or base machine using this command:
 ubuntu -a
 Tomcat server default path is always : /usr/local/tomcat/bin to start tomcat
 ./startup.sh
@@ -84,7 +84,7 @@ or du(disk utilizing it will show how much disk space you are using)
 
 by using of your base machine we can create volumes if you run the command :
 docker volumes ls( it will not showing any volumes untill we create Volumes)
-if you want create the volumes during container creatation and also map the volumes with the created container perivously:
+if you want create the volumes during container creation and also map the volumes with the created container perivously:
 
 creating container with volumes
 hostvolume(hostvol we created in host machine and conatiner volume we are going to create inside the container volume)

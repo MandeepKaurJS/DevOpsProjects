@@ -45,8 +45,8 @@ then go to that server console to check wheter file is copied or not by it's pat
 
 cd /var/www/html/
 
-then whatt we need to do to start the service 
-ansible -m service -a "name=hhtpd state=restarted" production --become
+then what we need to do to start the service 
+ansible -m service -a "name=httpd state=restarted" production --become
 
 
 

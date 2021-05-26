@@ -62,7 +62,7 @@ I used those commands to install ansible on ubuntu 16.4.
 2.sudo apt-get update
 3.sudo apt-get install ansible
 
-After finishing this setup you will connected with agent then login from controller to database and webserver
+After finishing this setup you will be connected with agent then login from controller to database and webserver
  by using this command ssh 172.44.39.3(your private address of database or webserver)
 
 

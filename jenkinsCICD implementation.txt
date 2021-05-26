@@ -30,13 +30,13 @@ after this schedule tasks accordingly in build triggers,
 schedule after project and build periodically .
 
 
-7.Deployement 
+7.Deployment 
 need plugin called deploy to container to container.
 
 1.we need to launch new instance for this called AMI linux and tomcat. 
 and install java syntax yum install java-1.8* -y
 install apache tomcat latest version
-get the tar.gz link from tomcatapache officail website under tomcat in core and copy the link and install it in tmp folder.
+get the tar.gz link from tomcatapache official website under tomcat in core and copy the link and install it in tmp folder.
  
 2. after installing tomcat copy it to under opt folder using this command:
 cp -r filename which has tar.gz /opt/ go to opt folder cd /opt/
@@ -48,7 +48,7 @@ in order to start service of tomcat than used :cat catalina.sh
 
 4. to see te server we should allow the security server Go to ec2 tomcat instance click on secuirty 
 group click on inbound and add new rules which allow your port to access by choosing custome tcp
-and putt ur port under port range. now we need username and password in order to deploy an
+and put ur port under port range. now we need username and password in order to deploy an
 application on tomcat server.
 
 5. then go to under bin file called conf. by using cd ../conf/ command under this we have 
@@ -59,15 +59,15 @@ and then shutdown tomcat server by go back to ur bin directory using ./shutdown.
 after all these steps create username and pswd.
 
 6. do cat server.xml |grep connector
-use context.xml command for uname n pwd :we should commment default values 
+use context.xml command for uname n pwd :we should comment default values 
 find / -name context.xml to see manager app n other aaps
-choose /opt/apache-tomcat-8.5.56/webapps/host-manager/META-INF/context.xml this file to chane value
+choose /opt/apache-tomcat-8.5.56/webapps/host-manager/META-INF/context.xml this file to change value
 inside context comment the only value part and save.
 and then open the manager file by using this /opt/apache-tomcat-8.5.56/webapps/manager/META-INF/context.xml
 and comment the same value as we did in last file.
 
 7.
-now set the usename and pswd under tomcat-users.xml file by using vim tomcat-users.xml
+now set the username and pswd under tomcat-users.xml file by using vim tomcat-users.xml
 we should set the role name under this file by uncommenting roles and set role name 
 manager-gui and another one is manager-script and give username as you want and pswd and set roles
 manager-gui and manager-script then login with those credentials.
@@ -81,13 +81,13 @@ example :  <role rolename="manager-gui"/>
 8.
 Now ready to deploy your project under tomcat server and create new job in jenkins in order to do that.
 and set the goals for it called package. how to push our war file on tomcat server we need 
-plugins called deploy to container.after installing plugins go to poast build choose deploy war to container
+plugins called deploy to container.after installing plugins go to post build choose deploy war to container
 and give the default path for war file by */**.war this and then give the context path relavant to project
 name like addressbook and then add the container by clicking on add container by choosing tomcat8
 and then add your tomcat server credentials username tomcat and password by clicking on add button.
 
 9. next step is adding tomcat url: give your local url like: http://18.216.137.3:1030/urprojectname
-eg. http://18.216.137.3:1030/addressbook/ and open this projectunder tomcat then u willget the output 
+eg. http://18.216.137.3:1030/addressbook/ and open this project under tomcat then u will get the output 
 of your project and your war file is push to tomcat server. it's deploy on tomcat server.
 10.
 your war file should be under apache server under webapps.  
